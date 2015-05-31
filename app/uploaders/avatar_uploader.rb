@@ -48,4 +48,12 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  version :thumb do
+    process :resize_to_fit => [32, 32]
+  end
+
+  version :full do
+    process :resize_to_fit => [1024, 768]
+  end
+
 end
