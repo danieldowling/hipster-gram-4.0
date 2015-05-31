@@ -1,0 +1,51 @@
+<div id="signup-container">
+
+<h1 class="h1">Sign up now to enter!</h1>
+
+	<%= form_for @user do |f|  %>
+
+		<% if @user.errors.any? %>
+			<div>
+				<h4><%= pluralize(@user.errors.count, "error") %> prevented you from signing up for an account:</h4>
+
+				<ul>
+					<% @user.errors.full_messages.each do |msg| %>
+						<li class="list-group-item list-group-item-danger"><%= msg.downcase %> </li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+
+
+		<div class="login">
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+
+			<br>
+
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+
+			<br>
+		
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<br>
+		
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<br>
+		
+
+			<%= f.submit "Submit" %>
+
+			
+
+		</div>
+
+	<% end %>
+
+</div> <!-- end signup-container -->
