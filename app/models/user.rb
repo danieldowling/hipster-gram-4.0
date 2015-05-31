@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	# before_save :format_user_input
 	attr_reader :password
+  mount_uploader :image_url, AvatarUploader
 
 
 	def password=(unencrypted_password)
