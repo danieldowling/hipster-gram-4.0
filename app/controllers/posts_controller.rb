@@ -43,12 +43,19 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to users_path
+  end
+
+  def is_liked
+    @post = Post.find(params[:id])
+    @post.is_liked += 1
+    @post.save
+    redirect_to user_path
   end
 
   private
   def post_params
-    params.require(:post).permit(:image_url, :description, :user_id)
+    params.require(:post).permit(:image_url, :description, :is_liked, :user_id)
   end
 
     def authorized?

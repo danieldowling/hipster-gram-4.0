@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+
+  # custom post routes
+  get "posts/:id/is_liked" => "posts#is_liked", as: :is_liked
 end

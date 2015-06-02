@@ -12,10 +12,16 @@
 	
 	<%= image_tag post.image_url %>
 	<br>
+	<br>
 	<%= post.description %>
 	<br>
-
+	<br>
+	<button><%= link_to "Mainstream", is_liked_path %></button>
+	<br>
+	<br>
 <% end %>
+
+
 
 
 
