@@ -16,7 +16,7 @@
     <br>
     	<%= link_to 'View Profile', user_path(user) %>
 	</li>
-		<%= image_tag user.posts.last.image_url %>
+		<%= image_tag user.posts.last.image_url.url %>
 		<br>
 		<%= user.posts.last.description %>
 <% end %>
