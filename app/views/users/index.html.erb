@@ -12,17 +12,20 @@
 <% @users.each do |user| %>
 
 	<li>
-		<%= image_tag user.image_url %> <%= user.first_name %> <%= user.last_name %>
+		<%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %>
     <br>
-    <%= link_to 'View Profile', user_path(user) %>
-
-    <%= image_tag user.posts.image_url %>
-
+    	<%= link_to 'View Profile', user_path(user) %>
 	</li>
-
-
-
+		<%= image_tag user.posts.last.image_url %>
+		<br>
+		<%= user.posts.last.description %>
 <% end %>
+
+
+
+
+
+
 
 
 

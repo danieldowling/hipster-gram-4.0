@@ -1,3 +1,21 @@
 <h1>User Profile</h1>
 
-<%= link_to 'Add New Post', new_post_path %>
+
+<%= @user.first_name %> <%= @user.last_name %>
+<br>
+<%= link_to 'Add New Post', new_post_path %> <%= link_to "Go Back", users_path %>
+
+
+<h3>All of your posts are listed here brah</h3>
+
+<% @user.posts.each do |post| %>
+	
+	<%= image_tag post.image_url %>
+	<br>
+	<%= post.description %>
+	<br>
+
+<% end %>
+
+
+

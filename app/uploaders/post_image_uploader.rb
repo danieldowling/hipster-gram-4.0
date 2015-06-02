@@ -48,4 +48,8 @@ class PostImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  version :full do
+    process :resize_to_fit => [1024, 768]
+  end
+
 end
