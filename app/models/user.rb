@@ -1,15 +1,17 @@
 class User < ActiveRecord::Base
-	
-  has_many :posts
-	attr_reader :password
+  has_many :posts 
+  has_many :likes
+
   mount_uploader :image_url, AvatarUploader
+
+  attr_reader :password
 
 
 	def password=(unencrypted_password)
     unless unencrypted_password.empty?
     	@password = unencrypted_password
     	self.password_digest = BCrypt::Password.create(unencrypted_password)
- 	  end
+    end
   end
 
   def authenticate(unencrypted_password)
@@ -20,7 +22,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  #we are establishing validation requirement for users when they are signing in
+  # establishing validation requirement for users when they are signing in
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }

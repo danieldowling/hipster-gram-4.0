@@ -16,7 +16,11 @@
 	<%= post.description %>
 	<br>
 	<br>
-	<button><%= link_to "Mainstream", is_liked_path %></button>
+	<%= form_for Like.new do |f| %>
+		<%= hidden_field_tag(:post_id, post.id)  %> <!-- creating a hidden field in our form that will pass the posts id along when the form is submitted -->
+		
+		<%= f.submit "Mainstream"%>
+	<% end %>
 	<br>
 	<br>
 <% end %>

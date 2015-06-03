@@ -1,3 +1,4 @@
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,20 +12,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602031108) do
+ActiveRecord::Schema.define(version: 20150603034621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "image_url"
-    t.text     "description"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+  create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "is_liked",    default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "post_id"
+    t.integer  "liked"
   end
 
+  add_index "likes", ["post_id"], name: "index_likes_on_post_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "image_url",   default: "http://images.clipartpanda.com/hipster-glasses-drawing-moustache1.gif"
+    t.text     "description"
+    t.datetime "created_at",                                                                                    null: false
+    t.datetime "updated_at",                                                                                    null: false
+    t.integer  "user_id"
+    t.integer  "like_id"
+  end
+
+  add_index "posts", ["like_id"], name: "index_posts_on_like_id", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -38,5 +51,8 @@ ActiveRecord::Schema.define(version: 20150602031108) do
     t.string   "image_url"
   end
 
+  add_foreign_key "likes", "posts"
+  add_foreign_key "likes", "users"
+  add_foreign_key "posts", "likes"
   add_foreign_key "posts", "users"
 end

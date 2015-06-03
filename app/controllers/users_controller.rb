@@ -2,11 +2,13 @@ class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create]
 
 	def index
-    @users = User.all
+    # @users = User.all
+    @users = User.includes(:posts).joins(:posts).uniq
 	end
 
   def show
     @user = User.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def new

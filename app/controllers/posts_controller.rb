@@ -46,12 +46,7 @@ class PostsController < ApplicationController
     redirect_to users_path
   end
 
-  def is_liked
-    @post = Post.find(params[:id])
-    @post.is_liked += 1
-    @post.save
-    redirect_to user_path
-  end
+
 
   private
   def post_params
