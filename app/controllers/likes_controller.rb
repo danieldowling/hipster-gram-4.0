@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   def new
-    
+
   end
 
   def create
@@ -12,9 +12,9 @@ class LikesController < ApplicationController
     # redirect_to @user
     
     if Post.find(params[:post_id]).likes.count == 10
+      # @user.hipster_index += 10
       @like.post.destroy
       redirect_to user_path(@user)
-
     else
       redirect_to user_path(@user) #redirect to the user path of user which made the post that is being liked
     end

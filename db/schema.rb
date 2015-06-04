@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603034621) do
+ActiveRecord::Schema.define(version: 20150604035131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +44,11 @@ ActiveRecord::Schema.define(version: 20150603034621) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "password_digest"
     t.string   "image_url"
+    t.integer  "hipster_index",   default: 0
   end
 
   add_foreign_key "likes", "posts"

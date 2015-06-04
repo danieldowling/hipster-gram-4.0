@@ -16,7 +16,7 @@
 	<li>
 		<%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %> 
     <br>
-    	<%= user.hipster_index %>
+    	<h4>Hipster Index: <%= user.hipster_index %></h4>
     <br>
     	<%= link_to 'View Profile', user_path(user) %>
 	</li>
