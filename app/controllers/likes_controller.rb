@@ -5,20 +5,38 @@ class LikesController < ApplicationController
 
   def create
     @like = current_user.likes.new #creates a new like attached to the current user
+    @post_that_is_liked = Post.find(params[:post_id])
+    @owner_of_liked_post = @post_that_is_liked.user
     @like.post = Post.find(params[:post_id]) #the new likes post is equal to that posts specific id
     @like.save #save the like
-    @user = @like.post.user #store the likes post_id and current user info in a variable
+    @user_that_likes_post = @like.post.user #store the likes post_id and current user info in a variable
     # redirect_to @like.post.user
     # redirect_to @user
     
-    if Post.find(params[:post_id]).likes.count == 10
-      # @user.hipster_index += 10
+    if Post.find(params[:post_id]).likes.count == 2
+      # p '***************'
+      # p '***************'
+      # p '***************'
+      # p "Hipster index should be incrementing"
+      # p "@post_that_is_liked is #{@post_that_is_liked}"
+      # p "@post user is#{@owner_of_liked_post.first_name}"
+      @owner_of_liked_post.hipster_index += 1
+      # p "@post just got incremented, value is #{@owner_of_liked_post.hipster_index}"
+      if @owner_of_liked_post.save!
+        puts 'It saved hipster index'
+      else
+        puts 'that shit failed'
+      end
       @like.post.destroy
-      redirect_to user_path(@user)
+      # p "hipster index of post owner is #{@owner_of_liked_post.hipster_index}"
+      redirect_to user_path(@user_that_likes_post)
     else
-      redirect_to user_path(@user) #redirect to the user path of user which made the post that is being liked
+      redirect_to user_path(@user_that_likes_post) #redirect to the user path of user which made the post that is being liked
     end
   end
+
+  
+  
 
 
 
@@ -31,15 +49,4 @@ end
 
 
 
-  # def mainstream
-  #  @like = current_user.likes
-  #  @like.post = Post.find(params[:post_id])
-
-  #  if @post.likes.count == 10
-  #   @post.destroy
-  #  else
-  #   redirect_to user_path
-  #  end
-
-  # end
 
