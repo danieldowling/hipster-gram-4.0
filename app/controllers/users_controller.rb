@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
 	def index
     # @users = User.all
-    @users = User.includes(:posts).joins(:posts).uniq
+    @users = User.includes(:posts).joins(:posts).uniq.order(:hipster_index)
 	end
 
   def show

@@ -1,3 +1,48 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#home-container {
+	
+	background-image: url(http://images.clipartpanda.com/hipster-glasses-drawing-moustache1.gif);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	background-color: 0,0,0,0.6;
+	height: 100%;
+
+	 
+	.header {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 50px;
+		margin-bottom: 80px;
+	}
+
+	.homeNav {
+		text-align: center;
+		margin-bottom: 10px;
+		color: white;
+		font-size: 25px;
+		font-family: 'VT323', ;
+	}
+
+	.signup a {
+		color: black;
+		float: left;
+		margin-left: 350px;
+		margin-bottom: 760px;
+	}
+
+	.login a {
+		color: black;
+		margin-right: 165px;
+
+	}
+
+	.footer {
+		margin-top: 100px;
+		text-align: center;
+		font-size: 25px;
+		font-family: 'VT323', ;
+		clear: both;
+	}
+ 
+}

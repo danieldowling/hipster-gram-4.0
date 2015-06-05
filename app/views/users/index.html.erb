@@ -1,31 +1,30 @@
 <h1>Main Page</h1>
 
-<% if logged_in? %>
-  Logged in as: <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
-<% else %>
-  <%= link_to 'Log In', login_path %>
-<% end %>
+	<% if logged_in? %>
+	  Logged in as: <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
+	<% else %>
+	  <%= link_to 'Log In', login_path %>
+	<% end %>
 
-<%= link_to 'Add New Post', new_post_path %>
+	<%= link_to 'Add New Post', new_post_path %>
 
-<br>
-<br>
-
-<% @users.each do |user| %>
-
-	<li>
-		<%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %> 
-    <br>
-    	<h4>Hipster Index: <%= user.hipster_index %></h4>
-    <br>
-    	<%= link_to 'View Profile', user_path(user) %>
-	</li>
-		<%= image_tag user.posts.last.image_url %>
-	<br>
-		<%= user.posts.last.description %>
-	<br>
 	<br>
 	<br>
 
-<% end %>
+	<% @users.each do |user| %>
 
+		<li>
+			<%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %> 
+	    <br>
+	    	<h4>Hipster Index: <%= user.hipster_index %></h4>
+	    <br>
+	    	<%= link_to 'View Profile', user_path(user) %>
+		</li>
+			<%= image_tag user.posts.last.image_url %>
+		<br>
+			<%= user.posts.last.description %>
+		<br>
+		<br>
+		<br>
+
+	<% end %>

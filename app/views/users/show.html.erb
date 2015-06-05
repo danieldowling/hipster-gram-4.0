@@ -1,30 +1,36 @@
-<h1>User Profile</h1>
+<div class="row">
+	<div class="col-lg-4">
+		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+		<h3>Hipster Index: <%= @user.hipster_index %></h3>
 
 
-<%= @user.first_name %> <%= @user.last_name %>
-<br>
-<%= link_to 'Add New Post', new_post_path %> <%= link_to "Go Back", users_path %>
+		<%= link_to 'Add New Post', new_post_path %> <%= link_to "Go Back", users_path %>
+	</div>
 
+	<div class="col-lg-8">
+		<h3>All of the posts are listed here...if you care</h3>
 
-<h3>All of your posts are listed here brah</h3>
+		<% @user.posts.each do |post| %>
+			
+			<%= image_tag post.image_url %>
+			<br>
+			<br>
+			<%= post.description %>
+			<br>
+			<br>
+			<%= form_for Like.new do |f| %>
+				<%= hidden_field_tag(:post_id, post.id)  %> <!-- creating a hidden field in our form that will pass the posts id along when the form is submitted -->
+				
+				<%= f.submit "Mainstream", class: "btn btn-primary"%>
+			<% end %>
+			<br>
+			<br>
+		<% end %>
 
-<% @user.posts.each do |post| %>
-	
-	<%= image_tag post.image_url %>
-	<br>
-	<br>
-	<%= post.description %>
-	<br>
-	<br>
-	<%= form_for Like.new do |f| %>
-		<%= hidden_field_tag(:post_id, post.id)  %> <!-- creating a hidden field in our form that will pass the posts id along when the form is submitted -->
-		
-		<%= f.submit "Mainstream"%>
-	<% end %>
-	<br>
-	<br>
-<% end %>
+	</div> 
 
+</div> <!-- end row -->
 
 
 
