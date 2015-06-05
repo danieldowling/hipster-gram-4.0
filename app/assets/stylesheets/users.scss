@@ -1,0 +1,248 @@
+#signup-container {
+
+	.signup h1{
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 50px;
+		margin-bottom: 80px;
+	}
+
+	.signup {
+		text-align: left;
+		border: 3px solid black;
+		border-radius: 10px;
+		padding: 40px;
+		padding-bottom: 80px;
+		margin: 100px;
+		margin-top: 20px;
+		margin-right: 250px;
+		margin-left: 250px;
+		background-image: url(http://www.clipartbest.com/cliparts/RTG/y9g/RTGy9gyrc.png);
+		background-size: 320px;
+		background-position: right center;
+		background-repeat: no-repeat;
+		/*background-attachment: fixed;*/
+		background-color: black;
+		height: 30%;
+		color: white;
+	}
+
+	.signup label {
+		font-family: 'VT323', ;
+		margin: 15px;
+		font-size: 25px;
+	}
+
+	.signup input {
+		font-family: 'VT323', ;
+		margin: 15px;
+		border-radius: 5px;
+	}
+
+	.signup button {
+		padding: 10px;
+		margin: 0px;
+		font-family: 'VT323', ;
+		border-radius: 20px;
+		border: 3px solid black;
+		margin-top: 50px;
+		color: white;
+		background-color: white;
+	}
+
+	.signup button input {
+		border: none;
+		background-color: white;
+		color: black;
+		font-size: 20px;
+		font-family: 'VT323', ;
+		border-radius: 10px;
+	}
+
+	.signup button a {
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
+	
+}
+
+/* end signup - container*/
+
+
+#index-container {
+	margin: 20px;
+	list-style-type: none;
+
+	.nav {
+		font-size: 18px;
+		font-family: 'VT323', ;
+	}
+
+	.nav a{
+		text-decoration: none;
+	}
+
+	.header {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 40px;
+		margin-bottom: 80px;
+	}
+
+
+	.post-button {
+		text-align: center;
+		border: 2px solid black;
+		border-radius: 10px;
+		padding: 60px;
+		margin:10px;
+		color: white;
+		font-size: 30px;
+		/*margin-right: 1120px;
+		margin-left: 10px;*/
+		margin: 0 auto;
+		background-image: url(http://www.inretail.nl/websites/inretail/gfx/topmusmon1.jpg);
+		background-size: 280px;
+		background-position: right center;
+		background-repeat: repeat-x;
+		/*background-attachment: fixed;*/
+		background-color: 0,0,0,0.6;
+		width: 80%;
+		/*transform: scaleX(-1);*/
+	}
+
+	.post-button a {
+		text-decoration: none;
+		color: black;
+		font-family: 'VT323', ;
+
+	}
+
+	.full-post {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 10px;
+		font-family: 'VT323', ;
+	}
+
+	.post {
+		display: flex;
+		flex: 2;
+		align-items: center;
+		flex-direction: column;
+		border-bottom: 2px solid black;
+	}
+
+	.post-image {
+		border: 3px solid black;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	.post-image img {
+		width: 450px;
+		height: 450px;
+	}
+
+	.post-description {
+		font-size: 35px;
+		border: 2px solid black;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		padding: 10px;
+		border-radius: 20px;
+	}
+
+
+}
+/*end of index-container*/
+
+#show-container {
+	margin: 10px;
+
+	.header {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 45px;
+		margin-bottom: 80px;
+	}
+
+	.header a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.header img {
+		height: 250px;
+		width: 250px;
+		border-radius: 10px;
+		border: 1px solid black;
+	}
+
+	h3 {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 30px; 
+	}
+
+	.full-post {
+		float: left;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 10px;
+	}
+
+	.posts {
+		float: right;
+		display: flex;
+		flex-wrap: wrap;
+		flex: 2;
+		align-items: center;
+		flex-direction: row;
+		margin: 10px;
+	}
+
+	.post-image {
+		border: 3px solid black;
+		border-radius: 20px;
+		margin: 25px;
+		overflow: hidden;
+	}
+
+	.post-image img {
+		width: 350px;
+		height: 350px;
+
+	}
+
+	.post-description {
+		border: 2px solid black;
+		border-radius: 5px;
+		font-family: 'VT323', ;
+		font-size: 25px;
+		padding: 10px;
+	}
+
+	.mainstream input {
+		padding: 15px;
+		font-size: 20px;
+		font-family: 'VT323', ;
+		color: white;
+		background-color: red;
+		border-radius: 10px;
+	}
+
+	.clear-float {
+		clear: both;
+	}
+
+}
+
+
+
+
+
+

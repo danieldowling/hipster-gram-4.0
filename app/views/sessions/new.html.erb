@@ -1,0 +1,32 @@
+<div id="login-container">
+
+	<div class="header">
+		<h1>Logging in? Wow, you must be hip</h1>
+	</div>
+	
+	<div class="login">
+		<%= form_for :login do |f| %>
+
+			<div>
+				<h3>Login or Sign Up</h3>
+			</div>
+
+			<div>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+			</div>
+
+			<div>
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+			</div>
+
+			<div>
+				<button><%= f.submit 'Log In' %></button>
+				<button><%= link_to "Signup", new_user_path %></button> 
+				<button><%= link_to "Go Back", root_path %></button>
+			</div>
+
+		<% end %> 
+	</div>
+</div> <!-- end login-container -->

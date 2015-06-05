@@ -1,0 +1,57 @@
+#post-container {
+	.header {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 45px;
+		margin-bottom: 80px;
+	}
+
+	.new {
+		text-align: center;
+		border: 3px solid black;
+		border-radius: 10px;
+		padding: 60px;
+		padding-bottom: 80px;
+		margin: 100px;
+		margin-top: 20px;
+		margin-right: 150px;
+		margin-left: 150px;
+		background-image: url(http://www.clipartbest.com/cliparts/xcg/L7G/xcgL7GacA.png);
+		background-size: 850px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		/*background-attachment: fixed;*/
+		background-color: white;
+		height: 30%;
+		color: white;
+	}
+
+	.new p {
+		font-family: 'VT323', ;
+		margin: 10px;
+		font-size: 25px;
+	}
+
+	.new input {
+		border-radius: 10px;
+		background-color: white;
+	}
+
+	.new button {
+		border-radius: 10px;
+		font-size: 16px;
+		font-family: 'VT323', ;
+	}
+
+	.new button input {
+		border: none;
+		padding: 10px;
+	}
+
+	.new button a {
+		text-decoration: none;
+		background-color: white;
+		padding: 10px;
+		color: black;
+	}
+}

@@ -1,0 +1,31 @@
+<div id="post-container">
+
+<div class="header">
+	<h1>Post something, or don't</h1>
+</div>
+
+	<%= form_for @post do |f| %>
+
+		<div class="new">
+
+
+			<p>Picture, please:</p><% f.label :image_url %>
+			<%= f.file_field :image_url %>
+
+			<p>Tell us about it if you want:</p><% f.label :description %>
+			<%= f.text_field :description %>
+		
+		<br>
+		<br>
+
+
+		<button><%= f.submit "Add Post" %></button>
+
+		<button><%= link_to "Back to Home Page", users_path %></button>
+
+		</div>
+
+	<% end %>
+
+
+</div> <!-- end post container-->

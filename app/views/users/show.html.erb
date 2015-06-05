@@ -1,0 +1,48 @@
+<div id="show-container">
+	<div class="header">
+		<div>
+			<%= image_tag @user.image_url %>
+		</div>
+		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+		<h3>Hipster Index: <%= @user.hipster_index %></h3>
+
+
+		<%= link_to "Go Back", users_path %>
+	</div>
+
+	<h3>All of the posts are listed here...if you care</h3>
+
+	<div class="full-post">
+		
+		<div class="posts">
+			<% @user.posts.each do |post| %>
+				<div class="post-image">
+					<%= image_tag post.image_url %>
+				</div>
+				
+				<div class="clear-float">
+					<div class="post-description">
+						<%= post.description %>
+					</div>
+					<br>
+					<div class="mainstream">
+						<%= form_for Like.new do |f| %>
+							<%= hidden_field_tag(:post_id, post.id)  %> <!-- creating a hidden field in our form that will pass the posts id along when the form is submitted -->
+							
+							<%= f.submit "Mainstream" %>
+						<% end %>
+					</div>
+				</div>
+				<br>
+				<br>
+			<% end %>
+		</div>
+
+	</div> 
+
+</div> 
+
+
+
+
