@@ -1,30 +1,49 @@
-<h1>Main Page</h1>
+<div id="index-container">
 
-	<% if logged_in? %>
-	  Logged in as: <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
-	<% else %>
-	  <%= link_to 'Log In', login_path %>
-	<% end %>
+	<div class="nav">
+		<% if logged_in? %>
+		  Logged in as: <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
+		<% else %>
+		  <%= link_to 'Log In', login_path %>
+		<% end %>
+	</div>
 
-	<%= link_to 'Add New Post', new_post_path %>
+	<div class="header">
+		<h1>Welcome to where the magic happens</h1>
+	</div>
 
+	<div class="post-button">
+		<%= link_to 'Add New Post', new_post_path %>
+	</div>
+	
 	<br>
-	<br>
+	<div class="full-post">
+		<% @users.each do |user| %>
 
-	<% @users.each do |user| %>
+			<li>
+				<h2><%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %> <h2>
 
-		<li>
-			<%= image_tag user.image_url.url(:thumb) %> <%= user.first_name %> <%= user.last_name %> 
-	    <br>
-	    	<h4>Hipster Index: <%= user.hipster_index %></h4>
-	    <br>
-	    	<%= link_to 'View Profile', user_path(user) %>
-		</li>
-			<%= image_tag user.posts.last.image_url %>
-		<br>
-			<%= user.posts.last.description %>
-		<br>
-		<br>
-		<br>
+				<br>
+
+				<h3><%= link_to 'View Profile', user_path(user) %><h3>
+		    
+		    	<h3>Hipster Index: <%= user.hipster_index %></h3>
+		    
+		    	
+			</li>
+			<div class="post">
+				<div class="post-image">
+					<%= image_tag user.posts.last.image_url %>
+				</div>
+				
+				<div class="post-description">
+					<%= user.posts.last.description %>
+				</div>
+			</div> <!-- end post -->
+	</div> <!-- end full-post -->
+		
+		
 
 	<% end %>
+</div>
+
