@@ -75,6 +75,7 @@
 
 	.nav {
 		font-size: 18px;
+		font-family: 'VT323', ;
 	}
 
 	.nav a{
@@ -113,6 +114,7 @@
 	.post-button a {
 		text-decoration: none;
 		color: black;
+		font-family: 'VT323', ;
 
 	}
 
@@ -121,6 +123,7 @@
 		flex-direction: column;
 		justify-content: center;
 		margin-top: 10px;
+		font-family: 'VT323', ;
 	}
 
 	.post {
@@ -153,3 +156,85 @@
 
 
 }
+/*end of index-container*/
+
+#show-container {
+	margin: 10px;
+
+	.header {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 45px;
+		margin-bottom: 80px;
+	}
+
+	.header a {
+		text-decoration: none;
+		color: black;
+	}
+
+	h3 {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 30px; 
+	}
+
+	.full-post {
+		float: left;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 10px;
+	}
+
+	.posts {
+		float: right;
+		display: flex;
+		flex-wrap: wrap;
+		flex: 2;
+		align-items: center;
+		flex-direction: row;
+		margin: 10px;
+	}
+
+	.post-image {
+		border: 3px solid black;
+		border-radius: 20px;
+		margin: 25px;
+		overflow: hidden;
+	}
+
+	.post-image img {
+		width: 350px;
+		height: 350px;
+
+	}
+
+	.post-description {
+		border: 2px solid black;
+		border-radius: 5px;
+		font-family: 'VT323', ;
+		font-size: 25px;
+		padding: 10px;
+	}
+
+	.mainstream input {
+		padding: 15px;
+		font-size: 20px;
+		font-family: 'VT323', ;
+		color: white;
+		background-color: red;
+		border-radius: 10px;
+	}
+
+	.clear-float {
+		clear: both;
+	}
+
+}
+
+
+
+
+
+
