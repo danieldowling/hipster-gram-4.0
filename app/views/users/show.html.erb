@@ -1,5 +1,8 @@
 <div id="show-container">
 	<div class="header">
+		<div>
+			<%= image_tag @user.image_url %>
+		</div>
 		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 
 		<h3>Hipster Index: <%= @user.hipster_index %></h3>
@@ -27,7 +30,7 @@
 						<%= form_for Like.new do |f| %>
 							<%= hidden_field_tag(:post_id, post.id)  %> <!-- creating a hidden field in our form that will pass the posts id along when the form is submitted -->
 							
-							<%= f.submit "Mainstream", class: "btn btn-primary"%>
+							<%= f.submit "Mainstream" %>
 						<% end %>
 					</div>
 				</div>

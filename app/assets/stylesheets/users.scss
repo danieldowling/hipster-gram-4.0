@@ -51,7 +51,8 @@
 	}
 
 	.signup button input {
-		background: none;
+		border: none;
+		background-color: white;
 		color: black;
 		font-size: 20px;
 		font-family: 'VT323', ;
@@ -171,6 +172,13 @@
 	.header a {
 		text-decoration: none;
 		color: black;
+	}
+
+	.header img {
+		height: 250px;
+		width: 250px;
+		border-radius: 10px;
+		border: 1px solid black;
 	}
 
 	h3 {
