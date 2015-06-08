@@ -14,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
+gem 'will_paginate', '~> 3.0.6' 
 
 
 group :development, :test do
