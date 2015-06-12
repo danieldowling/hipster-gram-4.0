@@ -14,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
+gem 'rails_12factor'
 
 
 group :development, :test do
