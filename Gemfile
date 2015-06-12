@@ -15,6 +15,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
 gem 'will_paginate', '~> 3.0.6' 
+gem 'figaro'
 
 
 group :development, :test do
