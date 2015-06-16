@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -14,7 +14,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
-gem 'rails_12factor'
 
 
 group :development, :test do
@@ -24,5 +23,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+end
+
+group :production do 
+  gem 'rails_12factor'
 end
 

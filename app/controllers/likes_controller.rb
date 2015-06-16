@@ -13,7 +13,7 @@ class LikesController < ApplicationController
     # redirect_to @like.post.user
     # redirect_to @user
     
-    if Post.find(params[:post_id]).likes.count == 2
+    if Post.find(params[:post_id]).likes.count == 10
       # p '***************'
       # p '***************'
       # p '***************'
