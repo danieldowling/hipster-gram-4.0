@@ -1,0 +1,49 @@
+<div id="edit-container">
+
+<div class="edit">
+<h1>Edit Your Profile</h1>
+
+	<%= form_for @user do |f|  %>			
+		
+		<div>
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+			
+			<br>
+
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+
+			<br>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<br>
+			
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<br>
+
+			<%= f.label :password_confirmation %>
+			<%= f.password_field :password_confirmation %>
+
+			<br>
+
+			<%= f.file_field :image_url %>
+
+			<br>
+				
+			<button>
+				<%= f.submit "Submit" %>
+			</button>
+				
+			<button>
+				<%= link_to "Go Back", user_path %>
+			</button>
+		</div>
+
+	<% end %>
+	</div>
+</div>
