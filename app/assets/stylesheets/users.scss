@@ -180,7 +180,7 @@
 		text-align: center;
 		font-family: 'VT323', ;
 		font-size: 45px;
-		margin-bottom: 80px;
+		margin-bottom: 0px;
 	}
 
 	.header a {
@@ -199,6 +199,18 @@
 		text-align: center;
 		font-family: 'VT323', ;
 		font-size: 30px; 
+	}
+
+	.delete {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 45px;
+		margin-bottom: 80px;
+	}
+
+	.delete a {
+		color: red;
+		text-decoration: none;
 	}
 
 	.full-post {
