@@ -2,8 +2,12 @@ class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create]
 
 	def index
-    # @users = User.all
-    @users = User.includes(:posts).joins(:posts).uniq.order(:hipster_index)
+    @users = User.includes(:posts).joins(:posts).uniq.order(:hipster_index).paginate(page: params[:page], per_page: 3)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
 	end
 
   def show
@@ -25,6 +29,26 @@ class UsersController < ApplicationController
       render :new
     end
 
+  end
+
+  def edit
+    @user = User.find(params[:id])  
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(user_params)
+      redirect_to users_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path
   end
 
 

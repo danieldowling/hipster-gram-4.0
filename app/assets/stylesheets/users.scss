@@ -90,6 +90,20 @@
 		margin-bottom: 80px;
 	}
 
+	.user-count {
+		text-align: center;
+		margin: 10px;
+		font-family: 'VT323', ;
+		font-size: 16px;
+	}
+
+	.paginate {
+		text-align: center;
+		margin: 10px;
+		font-family: 'VT323', ;
+		font-size: 16px;
+	}
+
 
 	.post-button {
 		text-align: center;
@@ -166,7 +180,7 @@
 		text-align: center;
 		font-family: 'VT323', ;
 		font-size: 45px;
-		margin-bottom: 80px;
+		margin-bottom: 0px;
 	}
 
 	.header a {
@@ -185,6 +199,18 @@
 		text-align: center;
 		font-family: 'VT323', ;
 		font-size: 30px; 
+	}
+
+	.delete {
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 45px;
+		margin-bottom: 80px;
+	}
+
+	.delete a {
+		color: red;
+		text-decoration: none;
 	}
 
 	.full-post {
@@ -239,6 +265,73 @@
 		clear: both;
 	}
 
+}
+
+#edit-container {
+	.edit h1{
+		text-align: center;
+		font-family: 'VT323', ;
+		font-size: 50px;
+		margin-bottom: 80px;
+	}
+
+	.edit {
+		text-align: left;
+		border: 3px solid black;
+		border-radius: 10px;
+		padding: 40px;
+		padding-bottom: 80px;
+		margin: 100px;
+		margin-top: 20px;
+		margin-right: 250px;
+		margin-left: 250px;
+		background-image: url(http://www.clipartbest.com/cliparts/RTG/y9g/RTGy9gyrc.png);
+		background-size: 320px;
+		background-position: right center;
+		background-repeat: no-repeat;
+		/*background-attachment: fixed;*/
+		background-color: black;
+		height: 30%;
+		color: white;
+	}
+
+	.edit label {
+		font-family: 'VT323', ;
+		margin: 15px;
+		font-size: 25px;
+	}
+
+	.edit input {
+		font-family: 'VT323', ;
+		margin: 15px;
+		border-radius: 5px;
+	}
+
+	.edit button {
+		padding: 10px;
+		margin: 0px;
+		font-family: 'VT323', ;
+		border-radius: 20px;
+		border: 3px solid black;
+		margin-top: 50px;
+		color: white;
+		background-color: white;
+	}
+
+	.edit button input {
+		border: none;
+		background-color: white;
+		color: black;
+		font-size: 20px;
+		font-family: 'VT323', ;
+		border-radius: 10px;
+	}
+
+	.edit button a {
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
 }
 
 
