@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create]
 
 	def index
-    @users = User.includes(:posts).joins(:posts).uniq.order(:hipster_index).paginate(page: params[:page], per_page: 3)
+    @users = User.includes(:posts).joins(:posts).uniq.order(:hipster_index)
 
     respond_to do |format|
       format.html
