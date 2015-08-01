@@ -4,6 +4,7 @@
 		font-family: 'VT323', ;
 		font-size: 45px;
 		margin-bottom: 80px;
+		width: 100%;
 
 	}
 
@@ -16,7 +17,7 @@
 		margin-right: 20px; 
 		margin-left: 20px;
 		background-image: url(http://images.clipartpanda.com/free-clipart-backgrounds-xTg5beGTA.svg);
-		background-size: 80%;
+		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		/*background-attachment: fixed;*/
@@ -34,10 +35,14 @@
 	.login label {
 		font-family: 'VT323', ;
 		font-size: 20px;
+		margin: 1%;
+		width: 20%;
 	}
 
 	.login input {
 		border-radius: 5px;
+		margin: 1%;
+		width: 20%;
 	}
 
 	.login button {
@@ -49,6 +54,7 @@
 		margin-top: 50px;
 		color: white;
 		background-color: white;
+		width: 30%;
 
 	}
 
