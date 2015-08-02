@@ -1,5 +1,6 @@
 #signup-container {
 
+
 	.signup h1{
 		text-align: center;
 		font-family: 'VT323', ;
@@ -13,29 +14,27 @@
 		border-radius: 10px;
 		padding: 40px;
 		padding-bottom: 80px;
-		margin: 100px;
-		margin-top: 20px;
-		margin-right: 250px;
-		margin-left: 250px;
+		margin: 0 auto;
+		width: 90%;
 		background-image: url(http://www.clipartbest.com/cliparts/RTG/y9g/RTGy9gyrc.png);
-		background-size: 320px;
+		background-size: 40%;
 		background-position: right center;
 		background-repeat: no-repeat;
 		/*background-attachment: fixed;*/
 		background-color: black;
-		height: 30%;
+		min-height: 100%;
 		color: white;
 	}
 
 	.signup label {
 		font-family: 'VT323', ;
-		margin: 15px;
+		margin: 1%;
 		font-size: 25px;
 	}
 
 	.signup input {
 		font-family: 'VT323', ;
-		margin: 15px;
+		margin: 1%;
 		border-radius: 5px;
 	}
 
