@@ -4,28 +4,29 @@
 	<h1>Post something, or don't</h1>
 </div>
 
-	<%= form_for @post do |f| %>
 
-		<div class="new">
+		<%= form_for @post do |f| %>
+
+			<div class="new">
+
+				<h3>Picture, please:</h3><% f.label :image_url %>
+				<%= f.file_field :image_url %>
+
+				<p>Tell us about it if you want:</p><% f.label :description %>
+				<%= f.text_field :description %>
+			
+			<br>
+			<br>
 
 
-			<p>Picture, please:</p><% f.label :image_url %>
-			<%= f.file_field :image_url %>
+			<button><%= f.submit "Add Post" %></button>
 
-			<p>Tell us about it if you want:</p><% f.label :description %>
-			<%= f.text_field :description %>
-		
-		<br>
-		<br>
+			<button><%= link_to "Back to Home Page", users_path %></button>
 
+			</div>
 
-		<button><%= f.submit "Add Post" %></button>
+		<% end %>
 
-		<button><%= link_to "Back to Home Page", users_path %></button>
-
-		</div>
-
-	<% end %>
 
 
 </div> <!-- end post container-->
